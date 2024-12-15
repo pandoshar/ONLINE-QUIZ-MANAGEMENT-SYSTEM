@@ -1,0 +1,15 @@
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.quizsystem.QuizController">
+    <children>
+        <Label fx:id="questionLabel" text="Question" layoutX="50" layoutY="50" wrapText="true" prefWidth="400"/>
+        <RadioButton fx:id="option1" layoutX="50" layoutY="100"/>
+        <RadioButton fx:id="option2" layoutX="50" layoutY="130"/>
+        <RadioButton fx:id="option3" layoutX="50" layoutY="160"/>
+        <RadioButton fx:id="option4" layoutX="50" layoutY="190"/>
+        <Button fx:id="submitButton" text="Submit" layoutX="100" layoutY="250" onAction="#handleSubmitButton"/>
+        <Button fx:id="finishButton" text="Finish" layoutX="200" layoutY="250" onAction="#handleFinishButton" disable="true"/>
+    </children>
+</AnchorPane>

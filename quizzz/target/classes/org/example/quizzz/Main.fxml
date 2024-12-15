@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.quizsystem.MainController">
+    <children>
+        <!-- Заголовок приложения -->
+        <Label text="Welcome to the Quiz!" layoutX="150" layoutY="50" font="System Bold 24"/>
+
+        <!-- Поле для ввода имени -->
+        <TextField fx:id="usernameField" layoutX="100" layoutY="150" prefWidth="200" promptText="Enter your name"/>
+
+        <!-- Кнопка для начала квиза -->
+        <Button text="Start Quiz" layoutX="150" layoutY="200" onAction="#startQuiz"/>
+
+        <!-- Дополнительный текст -->
+        <Label text="Please enter your name to start." layoutX="100" layoutY="250" font="System Regular 12"/>
+    </children>
+</AnchorPane>

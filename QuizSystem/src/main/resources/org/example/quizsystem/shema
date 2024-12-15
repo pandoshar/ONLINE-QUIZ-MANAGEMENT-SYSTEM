@@ -1,0 +1,33 @@
+-- Создание таблицы пользователей
+CREATE TABLE IF NOT EXISTS users (
+                                     id INTEGER PRIMARY KEY AUTOINCREMENT,
+                                     name TEXT NOT NULL
+);
+
+-- Создание таблицы вопросов
+CREATE TABLE IF NOT EXISTS questions (
+                                         id INTEGER PRIMARY KEY AUTOINCREMENT,
+                                         question_text TEXT NOT NULL,
+                                         answer1 TEXT NOT NULL,
+                                         answer2 TEXT NOT NULL,
+                                         answer3 TEXT NOT NULL,
+                                         answer4 TEXT NOT NULL,
+                                         correct_answer INTEGER NOT NULL -- Индекс правильного ответа (1, 2, 3, 4)
+);
+
+-- Создание таблицы результатов
+CREATE TABLE IF NOT EXISTS results (
+                                       id INTEGER PRIMARY KEY AUTOINCREMENT,
+                                       user_id INTEGER NOT NULL,        -- Ссылка на пользователя
+                                       score INTEGER NOT NULL,          -- Итоговый результат
+                                       FOREIGN KEY(user_id) REFERENCES users(id)
+);
+-- Таблица для хранения ответов пользователя на каждый вопрос
+CREATE TABLE IF NOT EXISTS user_answers (
+                                            id INTEGER PRIMARY KEY AUTOINCREMENT,
+                                            user_id INTEGER NOT NULL,        -- ID пользователя
+                                            question_id INTEGER NOT NULL,    -- ID вопроса
+                                            selected_answer INTEGER NOT NULL, -- Выбранный вариант (1, 2, 3, 4)
+                                            FOREIGN KEY(user_id) REFERENCES users(id),
+                                            FOREIGN KEY(question_id) REFERENCES questions(id)
+);

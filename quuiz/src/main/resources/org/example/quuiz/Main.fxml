@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="372.0" prefWidth="622.0" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.quuiz.MainController">
+    <TextField fx:id="nameField" layoutX="101.0" layoutY="122.0" />
+    <Button fx:id="nextButton" layoutX="66.0" layoutY="186.0" onAction="#startQuiz" text="Start Quiz" />
+   <Text fx:id="textname" layoutX="14.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="52.693359375">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </Text>
+   <Text fx:id="textquuiz" layoutX="254.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Math Quiz">
+      <font>
+         <Font size="25.0" />
+      </font>
+   </Text>
+   <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="233.0" layoutX="338.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../../../../../../Downloads/2.jpg" />
+      </image>
+   </ImageView>
+</AnchorPane>
